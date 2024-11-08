@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Validation
+    link(rel="stylesheet", href="/styles.css")
+  body
+    nav.navbar
+      .navbar-container
+        a.navbar-link(href="/") Home
+        a.navbar-link(href="/login") Login
+        a.navbar-link(href="/register") Register
+
+    .auth-container
+      .auth-box
+        h1 Registration Validation
+        .validation-results
+          p#validation-message
+          button.auth-button(onclick="window.location.href='/register'") Go Back to Register
+
+    script.
+      // Capture URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const validationMessage = urlParams.get('message');
+
+      // Display validation message if available
+      if (validationMessage) {
+          document.getElementById('validation-message').innerText = decodeURIComponent(validationMessage);
+      } else {
+          document.getElementById('validation-message').innerText = 'No validation message provided.';
