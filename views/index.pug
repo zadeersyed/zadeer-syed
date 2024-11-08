@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title News App
+    link(rel="stylesheet", href="/styles.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap", rel="stylesheet")
+  body
+    nav
+      .main-nav.container.flex
+        a.company-logo(href="#") NEWS
+        .nav-link
+          ul.flex
+            li.hover-link.nav-item(id="ipl", onclick="onNavItemClick('ipl')") IPL
+            li.hover-link.nav-item(id="finance", onclick="onNavItemClick('finance')") Finance
+            li.hover-link.nav-item(id="politics", onclick="onNavItemClick('politics')") Politics
+        .auth-links
+          a.login-link(href="/login") Login
+          a.register-link(href="/register") Register
+        .search-bar.flex
+          input#search-text.news-input(type="text", placeholder="e.g. Science")
+          button#search-button.search-button Search
+
+    main
+      .cards-container.container.flex#cards-container
+
+    template#template-news-card
+      .card
+        .card-header
+          img#news-img(src="https://via.placeholder.com/400x200", alt="news-image")
+        .card-content
+          h3#news-title This is the title
+          h6.news-source#news-source End Gadget 26/08/2023
+          p.news-desc#news-desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+    script(src="/script.js")
