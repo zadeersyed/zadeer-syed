@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --background-color: #f3faff;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+/* Header (Navbar) Styling */
+nav {
+    background: linear-gradient(135deg, #2294ed, #1d69a3); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 15px 20px; /* Increase padding for more space */
+    color: white; /* Text color for the header */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Company Logo Styling */
+.company-logo {
+    font-size: 36px; /* Slightly smaller font */
+    font-weight: 900; /* Heavier font weight */
+    color: #fff; /* White color for the logo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
+}
+
+/* Navigation Links Styling */
+.nav-link ul {
+    display: flex;
+    gap: 20px; /* Increase gap between links */
+}
+
+.nav-link ul li {
+    list-style: none; /* Remove bullet points */
+}
+
+.nav-link ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px; /* Add padding for larger clickable area */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-link ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background change on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Authentication Links Styling */
+.auth-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+.auth-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.news-input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #fff;
+    color: #2294ed;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1d69a3;
+    color: white;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    width: 360px;
+    height: 400px;
+    box-shadow: 0px 0px 4px #d4ecff;
+    border-radius: 4px;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 8px #d4ecff;
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+/* Auth Styling */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d4ecff;
+    border-radius: 4px;
+}
+
+.auth-button {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+/* Additional Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Additional styles for the rest of your page (if needed) */
+.auth-container {
+    margin-top: 20px;
+}
+
+.auth-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
